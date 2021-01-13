@@ -1,25 +1,24 @@
-export const authEndpoint = "https://accounts.spotify.com/authorize";
-const redirectUri = 'http://localhost:3000/callback';
-const clientId = "7dfaad7a61304aa2ace36eb7e6bc32df";
-
+const endpoint = "https://accounts.spotify.com/authorize";
+const client_id = "7dfaad7a61304aa2ace36eb7e6bc32df";
+const redirect_uri = "http://localhost:3000/";
 const scopes = [
   "user-read-currently-playing",
   "user-read-recently-played",
   "user-read-playback-state",
   "user-top-read",
-  "user-modify-playback-state",
 ];
 
-export const getTokenFromUrl = () => {
-  return window.location.hash
-    .substring(1)
-    .split("&")
-    .reduce((initial, item) => {  //conversion from an array to an object using reduce function
-      let parts = item.split("=");
-      initial[parts[0]] = decodeURIComponent(parts[1]); //key value pair generation
-      return initial;
-    }, {});
+const scope = scopes.join("%20");
+console.log(scope);
+
+export const loginURL = `${endpoint}?client_id=${client_id}&response_type=token&redirect_uri=${redirect_uri}&scope=${scope}&state=34fFs29kd09&show_dialog=true`;
+
+export const getToken = () => {
+  const addUrl = new URL(window.location.href).hash;
+  var urlParams = new URLSearchParams(addUrl);
+  const token = urlParams.get("#access_token");
+  console.log(token);
+  return token;
 };
-export const loginUrl = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
-  "%20"
-)}&response_type=token&show_dialog=true`;
+
+getToken();

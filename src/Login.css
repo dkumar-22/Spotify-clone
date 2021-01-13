@@ -1,20 +1,20 @@
-.login {
-    display: grid;
-    place-items: center;
-    height: 100vh;
-    background-color: black;
-  }
-  
-  .login img {
-    width: auto;
-    height: 100px;
-  }
-  
-  .login a {
-    padding: 20px;
-    border-radius: 99px;
-    font-weight: 600;
-    color: white;
-    text-decoration: none;
-    background-color: #1db954;
-  }
+.login-page {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: #191414;
+}
+
+.spotify-logo {
+  width: 50%;
+}
+
+.login-btn {
+  text-decoration: none;
+  font-weight: 800;
+  font-family: "Lato", sans-serif;
+  color: white;
+  background-color: #1db954;
+  padding: 20px;
+  border-radius: 99px;
+}

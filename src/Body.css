@@ -1,0 +1,13 @@
+.body {
+    /* border: 2px solid red; */
+    background: linear-gradient(to bottom, #131945 0%, #000000 100%);
+    height: auto;
+    flex: 0.8;
+    color: white;
+    padding: 20px;
+}
+
+.body > h1 {
+    font-size: 1.65rem;
+}
+

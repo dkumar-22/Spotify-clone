@@ -1,0 +1,34 @@
+.sidebar {
+  height: 100vh;
+  flex: 0.2;
+  min-width: 230px;
+  /* border: 2px solid black; */
+  background-color: #040404;
+  color: #b3b3b3;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.app-logo {
+  height: 40px;
+  padding: 15px;
+  margin-right: auto;
+}
+
+.sidebar > strong {
+  font-size: 0.8rem;
+  margin-left: 20px;
+}
+
+.sidebar > hr {
+  border: 1px solid #282828;
+  width: 90%;
+  margin: 10px auto;
+}
+
+.playlist-names {
+  height: 40%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
